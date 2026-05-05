@@ -42,6 +42,22 @@ npm install -g ima2-gen
 ima2 serve
 ```
 
+### GitHub Codespaces
+
+This repo is ready to run in GitHub Codespaces. Create a codespace, wait for the dev container setup to finish, then run:
+
+```bash
+npm run codespaces:serve
+```
+
+Open the forwarded `ima2-gen` port. For cloud OAuth login, use:
+
+```bash
+npx @openai/codex login --device-auth
+```
+
+More details: [Codespaces guide](docs/CODESPACES.md).
+
 Before updating a global install on Windows, stop any running `ima2 serve`
 process. If npm reports `EBUSY` or `resource busy or locked`, close ima2
 terminals, end stale `node.exe` processes if needed, and retry. If the lock

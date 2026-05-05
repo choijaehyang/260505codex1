@@ -8,6 +8,8 @@
   },
   "scripts": {
     "start": "node bin/ima2.js serve",
+    "codespaces:serve": "node scripts/codespaces-serve.mjs",
+    "codespaces:build": "npm ci && npm --prefix ui ci && npm run typecheck && npm run build:server && npm run build:cli && npm --prefix ui run build",
     "dev": "node scripts/dev.mjs",
     "dev:server": "tsx watch server.ts",
     "ui:install": "cd ui && npm install",
@@ -51,6 +53,7 @@
     "ui/dist/",
     "docs/",
     "assets/card-news/templates/",
+    "scripts/codespaces-serve.mjs",
     "server.ts",
     "config.ts",
     ".env.example",
